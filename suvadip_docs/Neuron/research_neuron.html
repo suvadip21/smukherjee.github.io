@@ -1,0 +1,214 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!-- saved from url=(0032)http://www.isical.ac.in/~mandar/ -->
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Neurome Project</title>
+<link rel="stylesheet" type="text/css" href="neuron.css">
+<style type="text/css"></style></head>
+<div id = "page">
+<div id = "inner_page">
+<div id="main" style="clear:both">
+<body>
+<a name="top_bar"> </a>
+<table cellpadding="2" cellspacing="10" border="0">
+<tbody><tr>
+<td><img src="anim.gif" width="400" border="0" alt="Traced Neuron"></td>
+<td valign="middle">
+	<table cellpadding="5" cellspacing="0" border="1">
+	<tbody>
+	<tr>
+	<td><h3 class="bold">Title</h3></td>
+	<td>Towards the <i>Neurome</i>: Segmentation of single neurons from 3D confocal microscopy</td>
+	</tr>
+	<tr>
+	<td><h3 class="bold">Members</h3></td>
+	<td><a href="http://viva-lab.ece.virginia.edu/profile_suvadip.html">Suvadip Mukherjee</a>, Saurav Basu, <a href="http://faculty.virginia.edu/condron_lab/">Barry Condron</a> and <a href= "http://viva-lab.ece.virginia.edu/profile_acton.html">Scott T. Acton</a></td>
+	</tr>
+	<tr>
+	<td><h3 class="bold">Funded by</h3></td>
+	<td>NSF</td>
+	</tr>
+	</tbody>
+	</table>
+</td>
+</tr>
+</tbody></table>
+
+<hr>
+
+
+<h1 class="center">
+<a href="#summary">Summary</a> |
+<a href="#pubs">Publications</a> |
+<a href="#downloads">Downloadable data</a> |
+<a href="#code">Code</a> 
+</h1>
+
+<hr> 
+
+<!-- Summary -->
+<a name="summary"> </a>
+<h2>Research Summary</h2>
+As we step into an age of emerging research in Bioimage Informatics, a relevent problem in this field is that of analyzing the neuronal structure of complex organisms. 
+While the neurome of the C.elegans have been fully understood, a major research focus is to analyze the neural network of more complicated species. 
+A major challenge in this field is to analyse 3-D microscopy images to represent the neuronal morphology mathematically. In this project we are interested in studying the fruit fly <i>Drosophila</i>.
+An adult Drosophila larva has around 20,000 neurons in its nervous system, and this animal has been considered in the biology community as a prototype 
+species for modeling the brain of more sophisticated animals, such as rats or humans. 
+Our research in this field focuses on segmenting the neurons of the fruit fly from a 3-D confocal microscopy image. Over the last few years, we have developed three novel neuron tracers-- 
+<b>Tree2Tree</b> [2], <b>Tree2Tree-2</b>[6] and <b>Tu</b>bularity <b>F</b>low <b>F</b>ield <b>(TuFF)</b>[1].
+<p>
+Tree2Tree is a graph theoretic neuron tracer, which uses sophisticated graph theory algorithms along with traditional image processing techniques to compute the 
+neuron trace (centerline). Tree2Tree-2 improves upon its predecessor by incorporating a variational segmentation step as well as a post processing stage to 
+link the disjoint neuronal segments.
+<p> 
+Our recent method is called TuFF. TuFF uses the flexibility of level sets to handle the neuron topology and has the capability of detecting and connecting neuron segments 
+even when  the signal intensity is significantly low. Results on 2-D and 3-D datasets have shown promise for further application to high throughput neuron imaging.
+
+<p> Once the segmentation is performed, the centerline of the object is extracted and saved in a <i>swc</i> format, which can be read by the popular image analysis
+software like <a href="http://home.penglab.com/proj/vaa3d/Vaa3D/About_Vaa3D.html">Vaa3D</a>. We have used Vaa3D for visualization and comparison of the tracers.
+
+<table align="center" cellpadding="5" cellspacing="0" border="0">
+	<tbody>
+	<tr>
+		<td><img src="n1.png" width="200" border="0" alt="n1_gt"></td>
+		<td><img src="n2.png" width="200" border="0" alt="n2_gt"></td>
+		<td><img src="n3.png" width="200" border="0" alt="n4_gt"></td>
+		<td><img src="n4.png" width="200" border="0" alt="n4_gt"></td>
+		<td><img src="n5.png" width="200" border="0" alt="n5_gt"></td>
+	</tr>
+	<tr>
+		<td><img src="n1_ours.png" width="200" border="0" alt="n1__ours"></td>
+		<td><img src="n2_ours.png" width="200" border="0" alt="n2__ours"></td>
+		<td><img src="n3_ours.png" width="200" border="0" alt="n4__ours"></td>
+		<td><img src="n4_ours.png" width="200" border="0" alt="n4__ours"></td>
+		<td><img src="n5_ours.png" width="200" border="0" alt="n5__ours"></td>
+	</tr>
+	</tbody>
+</table>
+<b>Figure 1</b>: Sample neuron tracing results, shown using the Vaa3D software. The top row shows manually segmented ground truth. Ours results are shown in magenta.
+<p>
+The following points summarize our contribution to the project:
+<ul>
+<li> TuFF, Tree2Tree and Tree2Tree are automated. Segmentation does not require user input seed points. 
+<li> Our tracers are robust to noise and clutter in confocal microscopy.
+<li> TuFF is equipped to handle significant intensity variation in the images.
+<li> High accuracy in tracing is observed in terms of neuron morphology preservation and accurate centerline detection. 
+<li> Superior tracing performance in comparison to the state of the art methods.
+</ul>
+
+To know more about our algorithms, check out our publications. 
+
+<!-- Publications -->
+<a name="pubs"> </a>
+<h2>Publications <a href="#top_bar">[Top]</a></h2>
+<ol>
+<li>S. Mukherjee, B. Condron and S.T. Acton, "Tubularity Flow Field – A Technique For Automatic Neuron Segmentation," <i>IEEE Transactions on Image Processing</i>, vol.24, no.1, pp.374,389, Jan. 2015.
+<a href="../TuFF.pdf">[paper]</a>
+<li>S. Basu, <i>et al</i>. "Segmentation and tracing of single neurons from 3D confocal microscope images." <i>IEEE Journal of Biomedical and Health Informatics</i>, 17.2 (2013): 319-335. 
+<a href="../T2T_ journal.pdf">[paper]</a>
+<li> S. Mukherjee <i>et al.</i> "Neuron segmentation with level sets", <i>ACSSC  2013:</i>1078-1082.
+<a href="../tuFFconf.pdf">[paper]</a>
+<li> S. Mukherjee, B. Condron and S. T. Acton, "Chasing the neurome: Segmentation and comparison of neurons," <i>EUSIPCO 2013</i>: 1-4
+<a href="../neurome.pdf">[paper]</a>
+<li> S. Mukherjee and S. T. Acton, "Vector field convolution medialness applied to neuron tracing," <i>ICIP 2013</i>: 665-669
+<a href="../medialness.pdf">[paper]</a>
+<li> S. Mukherjee <i>et al.</i>, "Tree2Tree2: Neuron tracing in 3D,"  <i>ISBI 2013</i>: 448-451.
+<a href="../T2T2.pdf">[paper]</a>
+<li> R. Sarkar, S. Mukherjee and S. T. Acton, "Shape descriptors based on compressed sensing with application to neuron matching", <i>ACSSC 2013</i>: 970-974
+
+<li> S. Mukherjee <i>et al.</i> "A geometric-statistical approach toward neuron matching", <i>ISBI 2012</i>:772-775.
+<a href="../geom.pdf">[paper]</a>
+</ol>
+
+<!-- Downloads -->
+<a name="downloads"> </a>
+<h2>Downloadable data <a href="#top_bar">[Top]</a></h2></h2>
+In our paper, we have used the 3D neuron stacks which are imaged by <a href="http://faculty.virginia.edu/condron_lab/">Dr. Condron's</a> lab at UVa. This dataset is called <b>Condron dataset</b>.
+You may download and use the images for research purpose only. Each folder consists of 3D confocal microscopy images of Drosophila, a manual segmentation file (<i>gt.swc</i>) and our tracing result (<i>TuFF.swc</i> or <i>T2T2.swc</i>).
+There are many softwares which provide beautiful 3D vizualization. I have found <a href="http://home.penglab.com/proj/vaa3d/Vaa3D/About_Vaa3D.html">Vaa3D</a> to be particularly 
+useful, since the traces can be "dragged and dropped". The remaining images used in our paper was obtained from the <a href="http://diademchallenge.org/challenge.html">Diadem</a> challenge dataset.
+
+If you are using our data for academic purposes, please cite the following papers:
+<ul>
+<li>S. Mukherjee, B. Condron and S.T. Acton, "Tubularity Flow Field – A Technique For Automatic Neuron Segmentation," <i>IEEE Transactions on Image Processing</i>, vol.24, no.1, pp.374,389, Jan. 2015.
+<li>S. Mukherjee, S. Basu, B. Condron and S.T. Acton <i>et al.</i>, "Tree2Tree2: Neuron tracing in 3D,"  <i>IEEE 10th International Symposium on Biomedical Imaging (ISBI)</i> vol., no., pp.448,451, 7-11 April 2013.
+</ul>
+<table align="center" cellpadding="5" cellspacing="0" border="0">
+	<tbody>
+	<tr>
+		<td><img src="./Data/c1_sn92.jpg" width="200" border="0" alt="n1_gt"></td>
+		<td><img src="./Data/I3_3.jpg" width="200" border="0" alt="n2_gt"></td>
+		<td><img src="./Data/I3_4.jpg" width="200" border="0" alt="n4_gt"></td>
+		<td><img src="./Data/I3_6.jpg" width="200" border="0" alt="n4_gt"></td>
+		<td><img src="./Data/intra_in40_body.jpg" width="200" border="0" alt="n5_gt"></td>
+	</tr>
+	<tr> 
+		<td align="center"><a href="./Data/c1_sn92.zip">[data]</a></td>
+		<td align="center"><a href="./Data/I3_3.zip">[data]</a></td>
+		<td align="center"><a href="./Data/I3_4.zip">[data]</a></td>
+		<td align="center"><a href="./Data/I3_6.zip">[data]</a></td>
+		<td align="center"><a href="./Data/intra_in40_body.zip">[data]</a></td>
+	</tr>
+	<tr>
+		<td><img src="./Data/intra_in40_tail.jpg" width="200" border="0" alt="n1__ours"></td>
+		<td><img src="./Data/intra_in44_body.jpg" width="200" border="0" alt="n2__ours"></td>
+		<td><img src="./Data/intra_in44_tail.jpg" width="200" border="0" alt="n4__ours"></td>
+		<td><img src="./Data/M4_1.jpg" width="200" border="0" alt="n4__ours"></td>
+		<td><img src="./Data/M4_2.jpg" width="200" border="0" alt="n5__ours"></td>
+	</tr>
+	<tr> 
+		<td align="center"><a href="./Data/intra_in40_tail.zip">[data]</a></td>
+		<td align="center"><a href="./Data/intra_in44_body.zip">[data]</a></td>
+		<td align="center"><a href="./Data/intra_in44_tail.zip">[data]</a></td>
+		<td align="center"><a href="./Data/M4_1.zip">[data]</a></td>
+		<td align="center"><a href="./Data/M4_2.zip">[data]</a></td>
+	</tr>
+	<tr>
+		<td><img src="./Data/M4_4.jpg" width="200" border="0" alt="n1__ours"></td>
+		<td><img src="./Data/M4_5.jpg" width="200" border="0" alt="n2__ours"></td>
+		<td><img src="./Data/M4_6.jpg" width="200" border="0" alt="n4__ours"></td>
+		<td><img src="./Data/M4_7.jpg" width="200" border="0" alt="n4__ours"></td>
+		<td><img src="./Data/M4_8.jpg" width="200" border="0" alt="n5__ours"></td>
+	</tr>
+	<tr> 
+		<td align="center"><a href="./Data/M4_4.zip">[data]</a></td>
+		<td align="center"><a href="./Data/M4_5.zip">[data]</a></td>
+		<td align="center"><a href="./Data/M4_6.zip">[data]</a></td>
+		<td align="center"><a href="./Data/M4_7.zip">[data]</a></td>
+		<td align="center"><a href="./Data/M4_8.zip">[data]</a></td>
+	</tr>
+		<tr>
+		<td><img src="./Data/M4_9.jpg" width="200" border="0" alt="n1__ours"></td>
+		<td><img src="./Data/sn30.jpg" width="200" border="0" alt="n2__ours"></td>
+	</tr>
+	<tr> 
+		<td align="center"><a href="./Data/M4_9.zip">[data]</a></td>
+		<td align="center"><a href="./Data/sn30.zip">[data]</a></td>
+	</tr>
+
+	</tbody>
+</table>
+
+We will keep uploading more data from time to time. 
+
+<!-- Codes -->
+
+<a name="code"> </a>
+<h2>Code <a href="#top_bar">[Top]</a></h2></h2> 
+Coming Soon...
+<p>
+<hr>
+<div align='center'><a href='http://www.websitecounterfree.com'><img src='http://www.websitecounterfree.com/c.php?d=6&id=11619&s=18' border='0' title='website counter free - free website hitcounter for your website'></a><br / ></div>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-59546862-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+</div></div></div>
+</body></html>

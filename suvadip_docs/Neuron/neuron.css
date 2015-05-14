@@ -1,0 +1,57 @@
+<style type="text/css">
+a { font-family: arial, helvetica, sans-serif; font-size: 16pt;}
+a.large { font-family: arial, helvetica, sans-serif; font-size: 16pt}
+a:link {
+    color: #6495ED; text-decoration: none;
+}
+/* visited link */
+a:visited {
+    color: #6495ED; text-decoration: none;
+}
+/* mouse over link */
+a:hover {
+    color: #00008B; text-decoration: underline;
+}
+/* selected link */
+a:active {
+    color: #00008B; text-decoration: underline;
+}
+
+body { font-family: Times, sans-serif; font-size: 13pt}
+div.h4 { font-size: 12pt; font-weight: normal; }
+h1.center { font-size: 16pt; font-weight: bold; text-align: center; }
+h1.left { font-size: 14pt; font-weight: normal; text-align: left; font-style: oblique }
+h1.left_bold { font-size: 14pt; font-weight: bold; text-align: left; }
+h2 { font-size: 16pt; font-weight: bold; color: #4169E1}
+h3 { font-family: "Times New Roman", Times, serif; font-size: 14pt; font-weight: normal;  }
+h3.bold { font-family: "Times New Roman", Times, serif; font-size: 12pt; font-weight: bold;  }
+h4 { font-size: 12pt; font-weight: normal; }
+p.slides { margin-top: -1%; }
+table.slides { margin-top: -1%; width: 50%; }
+li { padding: 2pt 0pt; }
+
+#page {
+ background-color: #FFFFFF;
+ margin-left: auto;
+ margin-right: auto;
+ width: 1100px;
+ text-align: left;
+ border-left: 1px solid #d9d9d9;
+ border-right: 1px solid #d9d9d9;
+}
+
+#inner-page{
+	 background-color: #E6E6FA;
+	 padding: 6px 26px 26px 26px;
+}
+
+#main { 
+ padding-left: 10px; padding-right: 10px; 
+ border-bottom: 1px solid #d9d9d9;
+ margin-top: 8px;
+ padding-top: 15px;
+ padding-bottom: 8px;
+}
+
+
+</style>

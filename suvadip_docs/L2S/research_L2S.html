@@ -1,0 +1,112 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!-- saved from url=(0032)http://www.isical.ac.in/~mandar/ -->
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>L2S</title>
+<link rel="stylesheet" type="text/css" href="L2S.css">
+<style type="text/css"></style></head>
+<body>
+<div id = "page">
+<div id = "inner_page">
+<div id="main" style="clear:both">
+
+<a name="top_bar"> </a>
+<table cellpadding="2" cellspacing="10" border="0">
+<tbody><tr>
+<td><img src="cover.gif" width="320" border="0" alt="L2S segmentation"></td>
+<td valign="middle">
+	<table cellpadding="5" cellspacing="0" border="1">
+	<tbody>
+	<tr>
+	<td><h3 class="bold">Title</h3></td>
+	<td>Region based segmentation using Legendre Level Sets (L2S)</td>
+	</tr>
+	<tr>
+	<td><h3 class="bold">Members</h3></td>
+	<td><a href="http://viva-lab.ece.virginia.edu/profile_suvadip.html">Suvadip Mukherjee</a> and <a href= "http://viva-lab.ece.virginia.edu/profile_acton.html">Scott T. Acton</a></td>
+	</tr>
+	<tr>
+	<td><h3 class="bold">Funded by</h3></td>
+	<td>NSF</td>
+	</tr>
+	</tbody>
+	</table>
+</td>
+</tr>
+</tbody></table>
+
+<hr>
+
+
+<h1 class="center">
+<a href="#summary">Summary</a> |
+<a href="#pubs">Publications</a> |
+<a href="#code">Code</a> 
+</h1>
+
+<hr> 
+
+<!-- Summary -->
+<a name="summary"> </a>
+<h2>Research Summary</h2>
+A general purpose segmentation procedure is proposed, which uses geometric active contour for object boundary detection. Active contours have gained popularity for image segmentation due to their ability to elastically deform
+and delineate object boundaries with sub-pixel accuracy. Furthermore, the energy minimization framework, which serves as the basic platform for most active contour based techniques,
+can be manipulated easily to introduce additional constraints based on shape, appearance etc. to assist segmentation. Geometric active contours are favored when the application requires
+the propagating curves to be able to adapt to the varying topology of the underlying object by automated splitting or merging. 
+<p>
+Many imaging techniques such as light microscopy, ultrasound etc.prduces noisy data, and in such cases edge based techniques for segmentation is less reliable. The pioneering work of Mumford-Shah, 
+which was later popularised by Chan and Vese utilizes region based information (as opposed to edge information) to perform segmentation. Such techniques are popularly refered to as "<i>region based active contour</i>". The
+Chan-Vese framework models the image as a set of constant illumination regions and performs a two-class segmentation by computing the optimal partition which satisfies the constant
+illumination constraint. The constant illumination assumption is challenged in applications where the signal intensity is inhomogeneous. encountered frequently in many medical and biological imaging
+applications like magnetic resonance (MR) imaging, ultrasound, X-ray, confocal and electron microscopy, etc. Current solutions use some form of local processing
+to tackle intra-region inhomogeneity, which makes such methods susceptible to local minima. We propose a solution which generalizes the traditional Chan-Vese algorithm. In contrast
+to existing local techniques, we represent the illumination of the regions of interest in a lower dimensional subspace using a set of pre-specified basis functions. This representation enables us to
+accommodate heterogeneous objects, even in presence of noise. The local intensities are modelled by <i>Legendre polynomials</i> and level sets are used to perform segmentation, hence the name <b>L</b>egendre <b>L</b>evel <b>S</b>et (L2S).
+
+<table align="center" cellpadding="5" cellspacing="0" border="0">
+	<tbody>
+	<tr>
+		<td><img src="L2S.gif" width="250" border="0" alt="L2S"></td>
+		<td><img src="cv.gif" width="250" border="0" alt="Chan-Vese"></td>
+	</tr>
+	<tr><td align="center" style="font-size: 12pt;"><b>L2S</b></td> <td align="center" style="font-size: 12pt"><b>Chan-Vese</b></td></tr>
+	</tbody>
+</table>
+The following points summarize our contribution to the project:
+<ul>
+<li> L2S performs segmentation in presence of inhomogeneous intensity. 
+<li> Computationally efficient.
+<li> Curve evolution and region approximation modelled in a single mathematical framework.
+<li> Excellent performance on a dataset of noisy ultrasound images.
+<li> Excellent segmentation results on 2D projection of confocal microscopy images of <i>Drosophila</i> neurons.
+</ul>
+
+
+<!-- Publications -->
+<a name="pubs"> </a>
+<h2>Publications <a href="#top_bar">[Top]</a></h2>
+<ol>
+<li>S. Mukherjee and S.T. Acton, "Region Based Segmentation in Presence of Intensity Inhomogeneity Using Legendre Polynomials," <i>IEEE Signal Processing Letters</i>,  vol.22, no.3, pp.298,302, March 2015.
+<a href="../L2S.pdf">[paper]</a>
+</ol>
+
+<!-- Codes -->
+
+<a name="code"> </a>
+<h2>Code <a href="#top_bar">[Top]</a></h2></h2> 
+My implementation of L2S in Matlab can be downloaded <a href="../L2S.zip">here</a>. The zipped folder contains the files for running L2S. If you are using the code, 
+please cite our paper [1].
+
+<h3 class="bold"> CREASEG plugin </h3>
+I have also implemented L2S as a plugin for the <a href="http://www.creatis.insa-lyon.fr/~bernard/creaseg/">CREASEG</a> package, which is a level set segmentation toolkit. Our algorithm is implemented as <i>Algorithm 7</i>. 
+My implementation as a creaseg plugin can be downloaded from <a href="../creaseg_L2S.zip">here</a>. This folder also contains a set of images, which we have used for our paper. 
+<p>
+I have found CREASEG to be particularly useful for comparing the performance of my method against the relevant region based active contour segmentation algorithms.
+If you are using this toolkit, in addition to citing [1], you should follow the CREASEG developer's <a href="http://www.creatis.insa-lyon.fr/~bernard/creaseg/files/copyright.html">instruction</a> for citing the relevant papers and copyright issues. 
+Please bear in mind that I am <b>not</b> the developer of this toolkit; I have just implemented my algorithm as a plugin for CREASEG.
+
+<hr>
+<p>
+<div align='center'><a href='http://www.websitecounterfree.com'><img src='http://www.websitecounterfree.com/c.php?d=6&id=11619&s=18' border='0' title='website counter free - free website hitcounter for your website'></a><br / ></div>
+</div></div></div>
+</body></html>
