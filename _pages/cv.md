@@ -9,7 +9,7 @@ redirect_from:
 
 {% include base_path %}
 
-Education
+Education [**Download CV**](cv_suvadip_2020.pdf)
 ======
 * B.S. in Electrical Engineering, Jadavpur University, India, 2008
 * M.S. in Computer Science, Indian Statistical Institute, 2011
