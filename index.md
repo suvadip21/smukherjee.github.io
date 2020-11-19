@@ -4,12 +4,18 @@ layout: homepage
 
 ## Research Interests
 
-- **Computer Vision:** image recognition, image generation, video captioning
-- **Machine Learning:** meta-learning, incremental learning, transfer learning
+- **Image Analysis:** image segmentation, inverse problems, bioimage analysis
+- **Machine Learning:** domain adaptation, deep learning for bioimaging
+- **Statistical Pattern Analysis:** spatial analysis, analysis of unstructured data
+- **Bioimage Informatics:** 
 
 ## News
 
-- **[Feb 2020]** 
+- **[Oct 2020]** Journal paper accepted in IEEE Transactions on Image Processing
+- **[Sept 2020]** Paper on multi-task learning accepted at ICPR
+- **[April 2020]** Journal paper accepted in IEEE Signal Processing Letters
+
+
 
 ## Publications
 
