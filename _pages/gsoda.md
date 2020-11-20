@@ -1,5 +1,6 @@
 ---
 title: "Research Topic"
+collection: research
 permalink: /research/gsoda
 sitemap: false
 ---
