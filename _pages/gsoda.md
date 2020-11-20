@@ -1,6 +1,6 @@
 ---
 title: "Research Topic"
-permlink: research/gsoda.md
+permalink: /research/gsoda
 sitemap: false
 ---
 
