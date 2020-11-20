@@ -6,8 +6,8 @@ main:
   - title: "Research"
     url: /research/
         
-  - title: "Research Portfolio"
-    url: /portfolio/
+#   - title: "Research Portfolio"
+#     url: /portfolio/
         
 #   - title: "Blog Posts"
 #     url: /year-archive/
@@ -15,5 +15,5 @@ main:
   - title: "CV"
     url: /cv/
     
-  - title: "Guide"
-    url: /markdown/
+#   - title: "Guide"
+#     url: /markdown/
