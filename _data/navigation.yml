@@ -1,12 +1,12 @@
 # main links links
 main:
-  - title: "Publications"
-    url: /publications/
+#   - title: "Publications"
+#     url: /publications/
 
-  - title: "Research"
-    url: /research/
+#   - title: "Research"
+#     url: /research/
         
-  - title: "Portfolio"
+  - title: "Research Portfolio"
     url: /portfolio/
         
 #   - title: "Blog Posts"
