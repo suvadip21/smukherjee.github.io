@@ -1,7 +1,7 @@
 ---
 title: "Research Topic"
 collection: research
-permalink: /research/gsoda
+permalink: /research/gsoda.md
 sitemap: false
 ---
 
